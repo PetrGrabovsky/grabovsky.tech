@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .primary-background {
+    @apply
+      from-background-primary to-background-secondary
+      border-accent-primary shadow-shadow-primary;
+  }
+}

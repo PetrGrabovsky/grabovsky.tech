@@ -16,7 +16,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       <body
         className={clsx(
           inter.className,
-          'bg-background-body text-text-primary antialiased'
+          'flex min-h-screen bg-background-body text-text-primary',
+          'flex-col overflow-x-hidden antialiased'
         )}
       >
         <Layout>{children}</Layout>
