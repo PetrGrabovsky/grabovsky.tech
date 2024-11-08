@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :focus-visible {
+    @apply
+      outline-none ring-1 ring-brand-primary
+      shadow-secondary rounded-md;
+  }
+}
+
 @layer components {
   .primary-background {
     @apply
       from-background-primary to-background-secondary
-      border-accent-primary shadow-shadow-primary;
+      border-accent-primary shadow-primary;
   }
 }
