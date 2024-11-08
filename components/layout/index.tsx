@@ -1,4 +1,7 @@
+'use client';
+
 import { ReactNode } from 'react';
+import useIsMobileView from '@/hooks/useIsMobileView';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -7,9 +10,11 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const isMobileView = useIsMobileView();
+
   return (
     <>
-      <Header />
+      <Header isMobileView={isMobileView} />
       <main className='flex-grow'>{children}</main>
       <Footer />
     </>

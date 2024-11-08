@@ -1,13 +1,22 @@
 import Link from 'next/link';
 import Logo from './Logo';
+import MenuButton from './MenuButton';
 
-const HeaderContent = () => {
+interface HeaderContentProps {
+  isMobileView: boolean;
+}
+
+const HeaderContent = ({ isMobileView }: HeaderContentProps) => {
   return (
     <div className='flex h-16 items-center justify-between'>
-      <Link href='/' className='block h-full py-2'>
+      <Link
+        href='/'
+        aria-label='Logo grabovsky.tech, přejít na domovskou stránku'
+        className='block h-full py-2'
+      >
         <Logo />
       </Link>
-      <span>Menu</span>
+      {isMobileView && <MenuButton />}
     </div>
   );
 };

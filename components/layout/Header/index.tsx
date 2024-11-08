@@ -1,13 +1,17 @@
 import clsx from 'clsx';
 import HeaderContent from './HeaderContent';
 
-const Header = () => {
+interface HeaderProps {
+  isMobileView: boolean;
+}
+
+const Header = ({ isMobileView }: HeaderProps) => {
   return (
     <header
       className={clsx('primary-background h-16 border-b bg-gradient-to-b')}
     >
       <div className='container'>
-        <HeaderContent />
+        <HeaderContent isMobileView={isMobileView} />
       </div>
     </header>
   );
