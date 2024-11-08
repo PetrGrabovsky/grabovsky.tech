@@ -17,7 +17,8 @@ export default {
         'brand-secondary': '#663399',
       },
       boxShadow: {
-        'shadow-primary': '0 0 10px rgba(102, 51, 153, 0.5)',
+        primary: '0 0 10px rgba(102, 51, 153, 0.5)',
+        secondary: '0 0 10px rgba(0, 204, 51, 0.5)',
       },
       container: {
         center: true,
